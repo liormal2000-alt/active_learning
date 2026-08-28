@@ -1,8 +1,7 @@
-# Project B — Section A: Active Learning for Employee Attrition
+# Active Learning for Employee Attrition
 
-Technion Project B, Section A. Given ~14,900 unlabeled employee records, 500 free labels,
-and an oracle that will sell **5,000 more**, choose which employees to pay for so that a
-**fixed** RandomForest maximises **F1 on the minority "Left" class**.
+Given ~14,900 unlabeled employee records, 500 free labels,and an oracle that will sell **5,000 more**, 
+choose which employees to pay for so that a **fixed** RandomForest maximises **F1 on the minority "Left" class**.
 
 **Result: mean F1 = 0.6471** (seeds 1/2/3 = 0.6381 / 0.6491 / 0.6539), using exactly 5,000
 unique queries, well inside the 60s-per-seed cap.
@@ -13,6 +12,9 @@ unique queries, well inside the 60s-per-seed cap.
 | **Deadline** | 23 July 2026, 22:55 |
 | **Submitted for Section A** | `strategy.py` + `video_link.txt` only |
 
+## My Contribution
+
+My work focused on designing and evaluating the active-learning strategy for the imbalanced employee attrition problem. I contributed to the iterative sampling and class-rebalancing pipeline, structured and analyzed 32 controlled experiments, and evaluated performance using repeated F1 measurements. I also investigated unsuccessful configurations and compared observed improvements against the experimental noise floor to distinguish meaningful gains from random variation.
 ## The short version
 
 The metric decides the strategy. Two facts about F1-on-"Left"-at-a-frozen-0.5-threshold
